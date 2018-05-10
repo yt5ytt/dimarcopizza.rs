@@ -1,0 +1,1097 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+body{
+	background-color: hsla(43, 81%, 74%, 1);
+}
+
+/**************************/
+/*  index Administracija  */
+/**************************/
+
+#login-container{
+	position: relative;
+	top: 200px;
+	width: 100%;
+	max-width: 500px;
+	min-height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
+	border-radius: 30px;
+	-webkit-box-shadow: 0 0 50px 20px rgba(46, 50, 50, .8);
+	-moz-box-shadow: 0 0 50px 20px rgba(46, 50, 50, .8);
+	box-shadow: 0 0 50px 20px rgba(46, 50, 50, .8);
+	text-align: center;
+}
+
+#login-container img{
+	max-width: 30%;
+}
+
+#login-container h1{
+	font-weight: bolder;
+	font-size: 2em;
+}
+
+#login-container section{
+	margin: 2% 0;
+	overflow: hidden;
+}
+
+#login-container section .label{
+	width: 30%;
+	float: left;
+	text-align: right;
+	font-size: 1.5em;
+	line-height: 2em;
+}
+
+#login-container section .input{
+	width: 60%;
+	float: right;
+	line-height: 2em;
+	margin-right: 5%;
+}
+
+#login-container .input input{
+	width: 100%;
+	line-height: 2em;
+	border-radius: 20px;
+	text-indent: 5%;
+	font-size: 1.2em;
+}
+
+#login-container section .submit input{
+	color: yellow;
+	cursor: pointer;
+	line-height: 2em;
+	font-size: 1.5em;
+	border:1px solid hsla(0, 0%, 100%, .5);
+	background-color: hsla(220, 100%, 60%, .5);
+	border-radius: 20px;
+	width: 40%;
+	transition: all .5s linear;
+}
+
+#login-container section .submit input:hover{
+	border:1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(220, 100%, 60%, 1);
+	transition: all .5s linear;
+}
+
+/********************************/
+/*      P O R U Dz B I N E      */
+/********************************/
+
+#container{
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+header{
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px dotted black;
+	margin-top: 1%;
+	padding-bottom: 1%;
+	line-height: 3em;
+}
+
+header #logo{
+	margin-left: 2%;
+	float: left;
+	width: 60%;
+	overflow: hidden;
+}
+
+header #logo img{
+	width: 10%;
+	vertical-align: middle;
+}
+
+header #logo em{
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 2em;
+	vertical-align: middle;
+	text-shadow: 5px 5px 3px white;
+}
+
+header #izloguj{
+	float: right;
+	width: 30%;
+	margin-right: 2%;
+	text-align: right;
+	line-height: 3em;	
+}
+
+header #izloguj a{
+	padding: 5px 20px;
+	border:1px solid hsla(0, 0%, 100%, .5);
+	background-color: hsla(360, 91%, 52%, .5);
+	border-radius: 20px;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: bolder;
+	color: white;
+	transition: all .5s linear;
+	box-shadow: 2px 2px 1px white;
+}
+
+header #izloguj a:hover{
+	border:1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(360, 91%, 52%, 1);
+	transition: all .5s linear;
+}
+
+nav{
+	width: 100%;
+	text-align: center;
+	text-shadow: 2px 2px 1px white;
+	line-height: 1.5em;
+	border-bottom: 1px dotted black;
+	padding: 1% 0;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+nav ul li{
+	display: inline-block;
+	padding-left: 1.6%;
+	padding-right: 1.6%;
+	border-left: 1px dotted black;
+}
+
+nav ul li:first-child{
+	padding-left: 0;
+	border-left: 0;
+}
+
+nav ul li:last-child{
+	padding-right: 0;
+}
+
+nav ul li a{
+	color: grey;
+	font-weight: bolder;
+	text-decoration: none;
+	transition: .3s linear all;
+}
+
+nav ul li a.stranica{
+	color: black;
+	text-shadow: 2px 2px white;
+}
+
+nav ul li a:hover{
+	color: black;
+	transition: .3s linear all;
+}
+
+table ul{
+	list-style-type: none;
+}
+
+table ul li{
+	margin: 1%;
+	border: 1px dotted black;
+}
+
+#glavno #vreme{
+	width: 100%;
+	overflow: hidden;
+}
+
+#glavno .radno_vreme{
+	width: 30%;
+	float: left;
+	font-size: 1.5em;
+	text-align: left;
+	margin: 1% 0 1% 1%;
+	overflow: hidden;
+	display: block;
+	line-height: 1.5em;
+}
+
+#glavno .radno_vreme a.zatvoreno{
+	float: left;
+	width: 70%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: red;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#glavno .radno_vreme a.zatvoreno:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+#glavno .radno_vreme a.otvoreno{
+	float: left;
+	width: 70%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: blue;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#glavno .radno_vreme a.otvoreno:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+#glavno .vreme{
+	width: 30%;
+	float: right;
+	font-size: 1.5em;
+	text-align: right;
+	margin: 1% 0;
+	overflow: hidden;
+	display: block;
+	line-height: 1.5em;
+}
+
+/********************************/
+/*      P A U Z I R A NJ E      */
+/********************************/
+
+#sidebar{
+	float: left;
+	width: 20%;
+}
+
+#sidebar ul{
+	width: 100%;
+	list-style-type: none;	
+}
+
+#sidebar li{
+	width: 100%;
+	border-top: 1px dotted black;
+	line-height: 2em;
+}
+
+#sidebar li:first-child{
+	border-top: none;
+}
+
+#sidebar a{
+	text-decoration: none;
+	color: grey;
+	font-size: 1.3em;
+	text-shadow: 2px 2px white;
+	transition: .1s linear all;
+}
+
+#sidebar a:hover{
+	color: black;
+	font-weight: bolder;
+	transition: .1s linear all;
+	cursor: pointer;
+}
+
+#wrapper{
+	width: 73%;
+	float: right;
+	padding-left: 3%;
+	border-left: 1px dotted black;
+	margin-bottom: 2%;
+}
+
+#wrapper .kategorija{
+	width: 100%;
+	overflow: hidden;
+}
+
+#wrapper .naslov{
+	border-bottom: 1px dotted black;
+	overflow: hidden;
+}
+
+#wrapper .naslov h1{
+	margin-left: 2%;
+	font-size: 2em;
+	text-shadow: 5px 5px 3px white;
+}
+
+#wrapper .proizvodi{
+	width: 100%;
+	overflow: hidden;
+}
+
+#wrapper .proizvodi table{
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+#wrapper .proizvodi table tr{
+	line-height: 2em;
+}
+
+#wrapper .proizvodi table th{
+	text-transform: uppercase;
+	border-bottom: 1px dotted black;
+}
+
+#wrapper .proizvodi table td{
+	border-bottom: 1px dotted black;
+	font-size: 1.2em;
+}
+
+#wrapper .proizvodi table td a.ukljuci{
+	float: right;
+	width: 100%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: red;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#wrapper .proizvodi table td a.iskljuci{
+	float: right;
+	width: 100%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: blue;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#wrapper .proizvodi table td a.ukljuci:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+#wrapper .proizvodi table td a.iskljuci:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+/********************************/
+/*      K O R I S N I C I       */
+/********************************/
+
+#korisnik{
+	width: 100%;
+	line-height: 2em;
+	border-bottom: 1px dotted black;
+	overflow: hidden;
+	font-size: 1em;
+	color: black;
+}
+
+#korisnik .naslov{
+	text-align: center;
+	font-weight: bolder;	
+}
+
+#korisnik .id_korisnika{
+	float: left;
+	width: 10%;
+	text-align: center;	
+}
+
+#korisnik .korisnik_naslov{
+	float: left;
+	width: 25%;
+	text-align: center;
+	font-weight: bolder;
+}
+
+#korisnik .korisnik{
+	float: left;
+	width: 25%;
+	text-align: left;
+}
+
+#korisnik .mail_adresa{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+#korisnik .brojnarucivanja{
+	float: left;
+	width: 20%;
+	text-align: center;
+	font-weight: bolder;
+}
+
+#korisnik .detalji{
+	float: right;
+	width: 15%;
+}
+
+#korisnik .detalji a{
+	float: left;
+	width: 100%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: blue;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#korisnik .detalji a:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+/*#korisnik .obrisi_korisnika{
+	float: right;
+	width: 14%;
+}
+
+#korisnik .obrisi_korisnika a{
+	float: right;
+	width: 100%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: red;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#korisnik .obrisi_korisnika a:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}*/
+
+#detalji_korisnika{
+	width: 100%;
+	border-top: 3px dotted black;
+	border-bottom: 3px dotted black;
+	overflow: hidden;
+}
+
+#naslovna{
+	line-height: 3em;
+	border-bottom: 1px dotted black;
+	overflow: hidden;
+}
+
+#naslovna .korisnik{
+	font-size: 2em;
+	float: left;
+	margin-left: 2%;
+}
+
+#naslovna .brojnarucivanja{
+	font-size: 1.5em;
+	float: right;
+	margin-right: 2%;
+}
+
+#detalji .abc{
+	line-height: 2em;
+	overflow: hidden;
+	border-bottom: 1px dotted black;
+}
+
+#detalji .abc:last-child{
+	border-bottom: 0;
+}
+
+#detalji .id{
+	float: left;
+	width: 25%;
+	margin-left: 2%;
+}
+
+#detalji .email{
+	float: left;
+	width: 25%;
+}
+
+#detalji .mobilni{
+	float: left;
+	width: 25%;
+}
+
+#detalji .fiksni{
+	float: right;
+	width: 23%;
+}
+
+#detalji .adresa{
+	float: left;
+	margin-left: 2%;
+	width: 50%;
+}
+
+#detalji .oblast{
+	width: 48%;
+	float: left;
+}
+
+#detalji .interfon{
+	float: left;
+	margin-left: 2%;
+	width: 50%;
+}
+
+#detalji .firma{
+	float: left;
+	width: 48%;
+}
+
+#porudzbine{
+	width: 100%;
+	margin-top: 5%;
+	border-top: 3px dotted black;
+	border-bottom: 3px dotted black;
+	overflow: hidden;
+}
+
+#porudzbine section{
+	line-height: 2em;
+	overflow: hidden;
+	border-bottom: 1px dotted black;
+}
+
+#porudzbine section:last-child{
+	border-bottom: none;
+}
+
+#porudzbine .id_naslov{
+	float: left;
+	width: 5%;
+	font-weight: bolder;
+	font-size: 1.2em;
+	text-align: left;
+	margin-left: 2%;
+}
+
+#porudzbine .id{
+	float: left;
+	width: 5%;
+	font-size: 1.2em;
+	text-align: left;
+	margin-left: 2%;
+}
+
+#porudzbine .datum, #porudzbine .vreme_porudzbine{
+	float: left;
+	width: 13%;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#porudzbine .datum_naslov, #porudzbine .vreme_porudzbine_naslov{
+	float: left;
+	width: 13%;
+	font-weight: bolder;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#porudzbine .porudzbina{
+	float: left;
+	/*font-size: 1.2em;*/
+	width: 55%;
+}
+
+#porudzbine ul{
+	list-style-type: none;
+}
+
+#porudzbine .porudzbina_naslov{
+	float: left;
+	width: 55%;
+	font-weight: bolder;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#porudzbine .cena{
+	float: right;
+	width: 10%;
+	font-size: 1.2em;
+	text-align: right;
+	margin-right: 2%;
+}
+
+#porudzbine .cena_naslov{
+	float: right;
+	width: 10%;
+	font-weight: bolder;
+	font-size: 1.2em;
+	text-align: center;
+	margin-right: 2%;
+}
+
+#back{
+	width: 100;
+	text-align: center;
+	margin: 5% 0;
+}
+
+#back a{
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	color: white;
+	border: 1px solid white;
+	border-radius: 15px;
+	background-color: blue;
+	opacity: .5;
+	transition: .3s linear all;
+	box-shadow: 2px 2px 1px white;
+}
+
+#back a:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+/***********************************/
+/* O B R I S I   K O R I S N I K A */
+/***********************************/
+
+#glavno #obrisi{
+	width: 50%;
+	margin: 5% auto;
+	text-align: center;
+	border: 1px solid grey;
+	padding: 2%;
+	border-radius: 20px;
+}
+
+#obrisi h1{
+	font-size: 3em;
+	margin-bottom: 1%;
+}
+
+#obrisi p{
+	font-size: 1.5em;
+	margin-bottom: 1%;
+}
+
+#obrisi ul{
+	list-style-type: none;
+	width: 100%;
+}
+
+#obrisi li{
+	display: inline-block;
+	margin: 2% 1%;
+	width: 25%;
+}
+
+#obrisi li a.obrisi{
+	display: block;
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: bolder;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 20px;
+	background-color: red;
+	opacity: .5;
+	transition: .3s linear all;
+	line-height: 1.5em;
+}
+
+#obrisi li a.obrisi:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+#obrisi li a.odustani{
+	display: block;
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: bolder;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 20px;
+	background-color: blue;
+	opacity: .5;
+	transition: .3s linear all;
+	line-height: 1.5em;
+}
+
+#obrisi li a.odustani:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+/*****************************************/
+/*      K Nj I G A   U T I S A K A       */
+/*****************************************/
+
+#naslov {
+	width: 100%;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 0;
+	font-size: 1.2em;
+}
+
+#naslov .rb, #naslov .date, #naslov .ime{
+	float: left;
+	width: 10%;
+}
+
+#naslov .tekst{
+	width: 56%;
+	float: left;
+}
+
+#naslov .obrisi{
+	width: 5%;
+	float: right;
+}
+
+#ostatak{
+	line-height: 2em;
+	overflow: hidden;
+}
+
+#ostatak .rb, #ostatak .date, #ostatak .ime{
+	float: left;
+	width: 10%;
+	text-align: center;
+}
+
+#ostatak .tekst{
+	float: left;
+	width: 56%;
+	text-align: left;
+}
+
+#ostatak .obrisi{
+	float: right;
+	width: 13%;
+	text-align: center;
+	line-height: 2em;
+}
+
+#ostatak .obrisi a{
+	float: right;
+	width: 100%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: red;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#ostatak .obrisi a:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+/*******************************************/
+/*      D O D A V A Nj E   S L I K A       */
+/*******************************************/
+
+#dodavanje_slike{
+	width: 100%;
+	overflow: hidden;
+	line-height: 2em;
+	background-color: blue;
+	border: 1px solid white;
+	opacity: .5;
+	color: white;
+	border-radius: 20px;
+}
+
+#dodavanje_slike .dodaj_sliku{
+	width: 80%;
+	margin-left: 2%;
+	line-height: 2em;
+}
+
+#dodavanje_slike .submit{
+	margin-right: 2%;
+	text-align: right;
+}
+
+#potvrda{
+	margin: 1% 0 0 2%;	
+}
+
+#gallery{
+	width: 100%;
+}
+
+#gallery ul{
+	list-style-type: none;
+}
+
+#gallery li{
+	float: left;
+	width: 10%;
+	min-width: 100px;
+	margin: 1%;
+}
+
+#gallery img{
+	display: block;
+	height: 100px;
+	width: 100%;
+	box-shadow: 4px 4px 2px hsla(140, 3%, 26%, 0.6);
+}
+
+#gallery a.obrisi_sliku{
+	text-decoration: none;
+	color: white;
+	font-weight: bolder;
+	float: right;
+	position: absolute;
+	border: 1px solid white;
+	background: red;
+	padding: 2px;
+	border-radius: 20%;
+	opacity: .5;
+}
+
+#gallery a.obrisi_sliku:hover{
+	opacity: 1;
+}
+
+/***********************************/
+/***** P R O M E N A   C E N A *****/
+/***********************************/
+
+#sidebar .submeni{
+	list-style-type: none;
+	font-size: .7em;
+	display: none;
+	position: relative;
+}
+
+#sidebar .submeni li{
+	line-height: 2em;
+	width: 100%;
+	border-top: 1px dotted black;
+}
+
+#sidebar .submeni a{
+	margin-left: 5%;
+	color: hsla(360, 100%, 47%, 0.5);
+	display: block;
+}
+
+#sidebar .submeni a:hover{
+	color: hsla(360, 100%, 47%, 1);
+}
+
+#sidebar .podmeni li:hover .submeni{
+	display: block;
+}
+
+#wrapper .proizvodi input.nova_cena{
+	line-height: 2em;
+	border-radius: 10px;
+	width: 95%;
+	float: right;
+	text-indent: 5%;
+	position: relative;
+}
+
+#wrapper .proizvodi input.promeni{
+	float: right;
+	width: 25%;
+	font-weight: bolder;
+	font-size: 1em;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: blue;
+	opacity: .5;
+	transition: .3s linear all;
+	line-height: 2em;
+	cursor: pointer;
+}
+
+#wrapper .proizvodi input.promeni:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}
+
+#wrapper .proizvodi textarea.opis{
+	border-radius: 10px;
+	width: 95%;
+	height: 100px;
+	float: left;
+	text-indent: 2%;
+}
+
+#wrapper .proizvodi td{
+	vertical-align: top;
+}
+
+/************************************************/
+/***** D O D A V A Nj E   P R O I Z V O D A *****/
+/************************************************/
+
+#glavno .naslov{
+	border-bottom: 1px dotted black;
+	overflow: hidden;
+}
+
+#glavno .naslov h1{
+	margin-left: 2%;
+	font-size: 2em;
+	text-shadow: 5px 5px 3px white;
+}
+
+#glavno .kateg{
+	margin: 2% 0 0 2%;
+	width: 50%;
+	height: 35px;
+	font-size: 1.2em;
+	border-radius: 10px;
+	text-indent: 2%;
+}
+
+#glavno .opcija{
+	text-indent: 2%;
+}
+
+#dodavanje_forma{
+	margin: 2% 0 0 2%;
+}
+
+#dodavanje_forma .naslov{
+	border: 0;
+	line-height: 2em;
+	overflow: hidden;
+}
+
+#dodavanje_forma .naslov h2{
+	float: left;
+}
+
+#dodavanje_forma .naslov input.naziv{
+	line-height: 2em;
+	text-indent: 2%;
+	width: 50%;
+	float: left;
+	margin-left: 2%;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+
+#dodavanje_forma .podaci{
+	margin-top: 2%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#dodavanje_forma .podaci .opis{
+	width: 47%;
+	float: left;
+	margin-right: 2%;
+}
+
+#dodavanje_forma .podaci h2{
+	border-bottom: 1px dotted black;
+	margin-bottom: 2%;
+}
+
+#dodavanje_forma .podaci .opis textarea{
+	width: 100%;
+	border-radius: 10px;
+	text-indent: 2%;
+	height: 10em;
+}
+
+#dodavanje_forma .podaci .cene{
+	width: 47%;
+	float: right;
+	margin-left: 2%;
+}
+
+#dodavanje_forma .podaci .cene section{
+	line-height: 2em;
+	overflow: hidden;
+	margin-bottom: 2.5%;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#dodavanje_forma .podaci .cene section .velicina{
+	float: left;
+	font-size: 1.2em;
+	width: 30%;
+	margin-right: 2%;
+}
+
+#dodavanje_forma .podaci .cene section input{
+	float: right;
+	line-height: 2em;
+	border-radius: 10px;
+	width: 65%;
+	text-indent: 5%;
+}
+
+#dodavanje_forma .podaci .cene section input.dugme{
+	float: right;
+	line-height: 2em;
+	border-radius: 10px;
+	width: 65%;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	background-color: blue;
+	cursor: pointer;
+	opacity: .5;
+	transition: .3s linear all;
+}
+
+#dodavanje_forma .podaci .cene section input.dugme:hover{
+	opacity: 1;
+	transition: .3s linear all;
+}

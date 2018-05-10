@@ -1,0 +1,583 @@
+*{
+	padding: 0;
+	margin: 0;
+	transition: all 1s ease;
+}
+
+body{
+	background: url(../img/background.jpg) no-repeat top center fixed;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+}
+
+#container{
+	width: 100%;
+	font-family: arial, serif;
+	color: white;
+	/*background: url(../img/snowing2.gif) no-repeat top center fixed;
+	background-size: cover;*/
+}
+
+#dedaMraz{
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 25%;
+	z-index: 2000;
+}
+
+#jelka{
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 15%;
+	z-index: 2000;	
+}
+
+#jelka img{
+	float: left;
+	width: 100%;
+}
+
+#dedaMraz img{
+	width: 100%;
+	float: right;
+}
+
+header{
+	position: relative;
+	width: 100%;
+	background-color: hsla(359, 100%, 0%, 0.5);
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#login {
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+#login #naruci{
+	float: left;
+	margin-left: 2%;
+}
+
+#naruci .naruci{
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-decoration: none;
+	padding: 5px 10px;
+	border:1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(360, 91%, 52%, 0.8);
+	border-radius: 20px;
+	-moz-animation: rotate 2s infinite;
+	animation: rotate 2s infinite;
+}
+
+#login #reglog{
+	float: right;
+	width: 66%;
+	margin-right: 2%;
+}
+
+#login #reglog ul{
+	list-style-type: none;
+	text-align: right;
+}
+
+#login #reglog li{
+	display: inline-block;
+	margin-left: 1%;
+}
+
+#login #reglog li:first-child{
+	margin-left: 0;
+}
+
+#login #reglog ul li a:link, a:visited{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px 10px;
+	border:1px solid hsla(0, 0%, 100%, 0);
+	background-color: hsla(220, 100%, 60%, 0);
+	border-radius: 20px;
+}
+
+#login #reglog ul li a:hover{
+	border: 1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(220, 100%, 60%, 0.8);
+    transition: all .2s linear;
+}
+
+#reglog .dobrodosli{
+	text-align: right;
+	font-weight: bold;
+}
+
+#reglog .dobrodosli em{
+	color: orange;
+}
+
+#reglog .dobrodosli a:link, a:visited{
+	display: inline-block;
+	color: white;	
+	text-decoration: none;
+	margin-left: 1%;
+}
+
+#reglog .dobrodosli .plavodugme{
+	padding: 5px 10px;
+	border:1px solid hsla(0, 0%, 100%, 0.5);
+	background-color: hsla(220, 100%, 60%, 0.5);
+	border-radius: 20px;
+	line-height: 1em;
+}
+
+#reglog .dobrodosli .crvenodugme{
+	padding: 5px 10px;
+	border:1px solid hsla(0, 0%, 100%, 0.5);
+	background-color: hsla(360, 91%, 52%, 0.5);
+	border-radius: 20px;
+	line-height: 1em;
+}
+
+#reglog .dobrodosli .plavodugme:hover{
+	border:1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(220, 100%, 60%, 0.8);
+}
+
+#reglog .dobrodosli .crvenodugme:hover{
+	border:1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(360, 91%, 52%, 0.8);
+}
+
+#headline{
+	width: 100%;
+	max-width: 1080px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding: 4% 0;
+}
+
+#headline img{
+	width: 25%;
+}
+
+#headline h1{
+	font-size: 8em;
+	font-style: italic;
+}
+
+#headline h2{
+	font-size: 3em;
+	font-style: italic;
+}
+
+#headline h3{
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+#headline p{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+nav{
+	width: 100%;
+	max-width: 1080px;
+	margin: 1% auto;
+}
+
+nav .nav_btn{
+	display: none;
+	line-height: 2em;
+}
+
+nav ul{
+	width: 100%;
+	list-style-type: none;
+	text-align: center;	
+}
+
+nav ul li{
+	display: inline-block;	
+}
+
+nav ul li a:link, a:visited{
+	display: block;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 5px;
+	border:1px solid hsla(0, 0%, 100%, 0);
+	background-color: hsla(220, 100%, 60%, 0);
+	border-radius: 20px;
+}
+
+nav ul li a em{
+	font-style: normal;
+	color: orange;
+}
+
+nav ul li a:hover{
+	border: 1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(220, 100%, 60%, 0.8);
+    transition: all .2s linear;
+}
+
+#content{
+	background:url(../img/wood_background.jpg) no-repeat center center;
+	background-size: cover;
+	background-opacity: .7;
+	overflow: hidden;
+}
+
+#content .snowing{
+	width: 100%;
+	/*background: url(../img/snowing2.gif) no-repeat top center fixed;
+	background-size: cover;*/
+}
+
+#content .opis{
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1%;
+	font-style: normal;
+}
+
+#content .opis h1{
+	font-size: 3em;
+	text-align: center;
+	margin: 1% 0;
+}
+
+#content .opis h2{
+	font-size: 2em;
+	text-align: center;
+}
+
+#content .opis h3{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+#content .text{
+	margin: 3% 0;
+	overflow: hidden;
+}
+
+#content .opis .text p{
+	font-size: 1em;
+	margin: 1% 0;
+	text-align: left;
+	margin: 1%;
+	float: left;
+}
+#content .text img{
+	width: 20%;
+	margin: 0 1% 0 0;
+}
+
+#content .leftalign{
+	float: left;
+}
+
+#content .rightalign{
+	float: right;
+}
+
+#content .online{
+	color: orange;
+}
+
+#content .blink{	
+	/*text-transform: uppercase;*/
+	color: lightgreen;
+	text-align: center;
+	-moz-animation: blink 2s infinite;
+	-webkit-animation: blink 2s infinite;
+	animation: blink 2s infinite;	
+}
+
+#content h2{
+	font-size: 2em;
+}
+
+#content .blink em{
+	text-transform: lowercase;
+	font-style: normal;
+}
+
+#content .center{
+	text-align: center;
+	margin: 3% 0;
+}
+
+#footer{
+	width: 100%;
+	background-color: hsla(359, 100%, 0%, 0.5);
+	overflow: hidden;	
+}
+
+#drustveno{
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	font-style: normal;
+	text-align: center;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#drustveno h1{
+	font-size: 3em;
+}
+
+#drustveno ul{
+	margin: 5% 0;
+	list-style-type: none;
+}
+
+#drustveno li{
+	display: inline-block;
+	margin-right: 5%;
+}
+
+#drustveno li:last-child{
+	margin-right: 0;
+}
+
+#drustveno li a{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	border: 1px solid white;
+	opacity: .4;
+}
+
+#drustveno li a:hover{
+	opacity: 1;
+	transition: all 1s linear;
+}
+
+#drustveno li a.facebook{
+	background:url(../img/facebook.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#drustveno .twitter{
+	background:url(../img/twitter.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#drustveno .mail{
+	background:url(../img/mail.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#footer footer{
+	font-size: 1em;
+	text-align: center;
+	margin: 1% 0;
+}
+
+footer a{
+	color: white;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+
+footer a:hover{
+	color: orange;
+	transition: all .2s linear;
+}
+
+#footer footer em{
+	font-size: 2em;
+}
+
+@media screen and (max-width:768px){
+
+#login{
+	margin: 0;
+	padding: 0;
+}	
+
+#login #naruci{
+	display: none;
+}
+
+#login #reglog{
+	width: 100%;
+	 background-color: hsla(360, 91%, 52%, 0.8);
+	 padding: 2% 0;
+	 line-height: 2em;
+	 margin-right: 0;
+}
+
+#reglog ul{
+	text-align: center;
+}
+
+#reglog ul li{
+	display: block;
+	width: 48%;
+	border-right: 1px dotted white;
+	text-align: center;
+}
+
+#reglog li:last-child{
+	border-right: none;
+}
+
+#login #reglog ul li a:link, a:visited{
+	padding: 4px 10px;
+}
+
+#login #reglog ul li a:hover{
+	border: 1px solid hsla(0, 0%, 100%, 0);
+	background-color: hsla(220, 100%, 60%, 0);
+}
+
+#reglog .dobrodosli{
+	text-align: center;
+}
+
+#headline{
+	padding: 0;
+}
+
+#headline img{
+	width: 30%;
+}
+
+#headline h1{
+	font-size:4em;
+}
+
+#headline h2{
+	font-size: 3em;
+}
+
+#headline h3{
+	font-size: 1.2em;
+}
+
+#headline h3 em{
+	display: none;
+}
+
+#headline p{
+	display: none;
+}
+
+nav{
+	margin: 0;
+}
+
+nav ul{
+	display: none;
+}
+
+nav .nav_btn{
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	background-color: hsla(360, 91%, 52%, 0.8);
+	padding: 2% 0;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+	border-bottom: 1px dotted hsla(345, 100%, 16%, 0);
+	cursor: pointer;
+}
+
+nav ul li{
+	display: block;	
+	width: 100%;
+	background-color: hsla(360, 91%, 52%, 0.8);
+	padding: 2% 0;
+	color: white;
+	text-align: center;
+	border-bottom: 1px dotted hsla(345, 100%, 16%, 0.8);
+}
+
+nav ul li:hover{
+	background-color: hsla(345, 100%, 16%, 0.8);
+}
+
+nav ul li:last-child{
+	border-bottom: none;
+}
+
+nav ul li a:hover{
+	border: 1px solid hsla(0, 0%, 100%, 0);
+	background-color: hsla(220, 100%, 60%, 0);
+}
+
+#content .opis h1{
+	font-size: 2em;
+}
+
+#content .opis h2{
+	font-size: 1.5em;
+}
+
+#content .opis h3, p{
+	font-size: 1.2em;
+}
+
+
+#content .blink{	
+	font-size: 1.2em;
+}
+
+#drustveno h1{
+	font-size: 2em;
+}
+
+#drustveno li a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+	border: 1px solid white;
+	opacity: .4;
+}
+
+#drustveno li a:hover{
+	opacity: 1;
+	transition: all 1s linear;
+}
+
+#footer footer{
+	font-size: .8em;
+	text-align: center;
+}
+
+#footer footer em{
+	font-size: 2em;
+}
+
+
+
+}

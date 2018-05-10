@@ -1,0 +1,631 @@
+*{
+	padding: 0;
+	margin: 0;
+	transition: all 1s ease;
+}
+
+body{
+	background: url(../img/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+#container{
+	width: 100%;
+	font-family: arial, serif;
+	color: white;
+}
+
+header{
+	position: relative;
+	width: 100%;
+	background-color: hsla(359, 100%, 0%, 0.5);
+	overflow: hidden;
+}
+
+.normalan{
+	color: white;
+	font-size: 1.5em;
+	text-align: left;
+}
+
+#login {
+	width: 100%;
+	max-width: 1080px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1%;
+	overflow: hidden;
+}
+
+#login #naruci{
+	float: left;
+}
+
+#naruci .naruci{
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-decoration: none;
+	padding: 5px 10px;
+	border:1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(360, 91%, 52%, 0.8);
+	border-radius: 20px;
+	-moz-animation: rotate 2s infinite;
+	animation: rotate 2s infinite;
+}
+
+#login #reglog{
+	float: right;
+	width: 70%;
+	text-align: right;
+	font-weight: bold;
+}
+
+#reglog .crvenodugme{
+	padding: 5px 10px;
+	text-decoration: none;
+	border:1px solid hsla(0, 0%, 100%, 0.5);
+	background-color: hsla(360, 91%, 52%, 0.5);
+	border-radius: 20px;
+}
+
+#reglog .crvenodugme:hover{
+	border:1px solid hsla(0, 0%, 100%, 0.8);
+	background-color: hsla(360, 91%, 52%, 0.8);
+}
+
+
+
+#headline{
+	width: 100%;
+	max-width: 1080px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding: 1% 0 5%;
+}
+
+#headline #logo{
+	float: left;
+}
+
+#headline #logo img{
+	float: left;
+	height: 2em;
+}
+
+#logo a{
+	text-decoration: none;
+	display: block;
+}
+
+#headline h3{
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 2em;
+}
+
+#headline #telefoni {
+	float: right;
+	line-height: 1.5em;
+	text-align: right;
+}
+
+#content{
+	background:url(../img/wood_background.jpg) no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#content .okvir{
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#content #glavno{
+	float: right;
+	text-align: center;
+	width: 75%;
+}
+
+#content #glavno h1{
+	font-size: 2.5em;
+}
+
+#kontejner{
+	width: 100%;
+	border: 1px dotted white;
+	background-color: hsla(359, 100%, 0%, 0.5);
+	overflow: hidden;
+	padding: 2%;
+	margin: 2% 0;
+	border-radius: 20px;
+}
+
+#kontejner .zaglavlje{
+	border-bottom: 1px dotted white;
+	padding-bottom: 1%;
+	overflow: hidden;
+}
+
+#kontejner .naziv{
+	color: white;
+	font-size: 1.5em;
+	float: left;
+	text-align: left;
+}
+
+#kontejner .datum{
+	color: white;
+	font-size: 1em;
+	float: right;
+}
+
+#kontejner .tekst{
+	font-size: 1em;
+	text-align: left;
+	padding-top: 1%;
+	overflow: hidden;
+}
+
+#kontejner .tekst .levo{
+	float: left;
+	width: 48%;
+}
+
+#kontejner .tekst .desno{
+	float: right;
+	width: 48%;
+}
+
+#forma{
+	width: 100%;
+	padding: 1%;
+	border: 1px dotted white;
+	border-radius: 20px;
+	overflow: hidden;
+	margin-bottom: 2%;
+}
+
+#forma section{
+	overflow: hidden;
+	margin: 1% 0;
+}
+
+#forma legend{
+	text-align: left;
+	font-size: 1.5em;
+	margin-bottom: 1%;
+}
+
+#forma .label{
+	float: left;
+	width: 30%;
+	text-align: right;
+	font-size: 1.5em;
+	line-height: 35px;
+}
+
+#forma .unos{
+	float: right;
+	width: 68%;
+	text-align: left;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+#forma .unos input{
+	height: 20px;
+	font-size: 1em;
+	width: 97%;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#forma .unos textarea{
+	height: 100px;
+	font-size: 1em;
+	width: 97%;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#forma .unos .mobilni{
+	float: left;
+	width: 49%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .fiksni{
+	float: right;
+	width: 49%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .mobilni input{
+	width: 94%;
+}
+
+#forma .unos .fiksni input{
+	width: 94%;
+}
+
+#forma .unos .ulica{
+	float: left;
+	width: 70%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .ulicnibroj{
+	float: right;
+	width: 30%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .ulica input{
+	width: 93%;
+}
+
+#forma .unos .ulicnibroj input{
+	width: 90%;
+}
+
+#forma .unos .interfon{
+	float: left;
+	width: 48%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .sprat{
+	float: left;
+	width: 25%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .brojstana{
+	float: right;
+	width: 25%;
+	text-align: left;
+	line-height: 20px;
+}
+
+#forma .unos .interfon input{
+	width: 90%;
+	
+}
+
+#forma .unos .sprat input{
+	width: 90%;
+}
+
+#forma .unos .brojstana input{
+	width: 90%;
+}
+
+#forma select{
+	width: 99%;
+	height: 35px;
+	font-size: 1em;
+	border-radius: 10px;	
+}
+
+#forma select option{
+	margin-left: 5%;
+}
+
+#forma .submit{
+	display: block;
+	width: 68%;
+	padding: 3px 10px;
+	border:1px solid hsla(0, 0%, 100%, .5);
+	background-color: hsla(220, 100%, 60%, .5);
+	border-radius: 10px;
+	color: white;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;	
+}
+
+#forma .submit:hover{
+	border:1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(220, 100%, 60%, 1);
+}
+
+#glavno .recenica{
+	width: 100%;
+	font-size: 1.5em;
+	margin: 1% 0;
+	font-style: normal;
+}
+
+#glavno .recenica em{
+	color: orange;
+}
+
+#glavno .recenica a:link, a:visited{
+	padding: 3px 10px;
+	border:1px solid hsla(0, 0%, 100%, .5);
+	background-color: hsla(220, 100%, 60%, .5);
+	border-radius: 20px;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#glavno .recenica a:hover{
+	border: 1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(220, 100%, 60%, 1);
+    transition: all .2s linear;
+}
+
+#glavno .recenica  a.obrisan:link, a.obrisan:visited{
+	padding: 3px 10px;
+	border:1px solid hsla(0, 0%, 100%, 0.5);
+	background-color: hsla(360, 91%, 52%, 0.5);
+	border-radius: 20px;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#glavno .recenica  a.obrisan:hover{
+	border:1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(360, 91%, 52%, 1);
+    transition: all .2s linear;
+}
+
+nav{
+	width: 18%;
+	float: left;
+}
+
+nav ul{
+	width: 100%;
+	list-style-type: none;
+	
+}
+
+nav ul li{
+	display: block;
+	width: 100%;
+	padding: 3px 10px;
+	border:1px solid hsla(0, 0%, 100%, .5);
+	background-color: hsla(220, 100%, 60%, .5);
+	border-radius: 20px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+nav ul li a:link, a:visited{
+	display: block;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;	
+}
+
+nav ul li a em{
+	font-style: normal;
+	color: orange;
+}
+
+nav ul li:hover{
+	border: 1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(220, 100%, 60%, 1);
+}
+
+nav .brisanje{
+	border:1px solid hsla(0, 0%, 100%, 0.5);
+	background-color: hsla(360, 91%, 52%, 0.5);
+}
+
+nav .brisanje:hover{
+	border:1px solid hsla(0, 0%, 100%, 1);
+	background-color: hsla(360, 91%, 52%, 1);
+}
+
+#footer{
+	width: 100%;
+	background-color: hsla(359, 100%, 0%, 0.5);
+	overflow: hidden;	
+}
+
+#drustveno{
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	font-style: normal;
+	text-align: center;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#drustveno h1{
+	font-size: 3em;
+}
+
+#drustveno ul{
+	margin: 5% 0;
+	list-style-type: none;
+}
+
+#drustveno li{
+	display: inline-block;
+	margin-right: 5%;
+}
+
+#drustveno li:last-child{
+	margin-right: 0;
+}
+
+#drustveno li a{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border-radius: 70px;
+	border: 1px solid white;
+	opacity: .4;
+}
+
+#drustveno li a:hover{
+	opacity: 1;
+	transition: all 1s linear;
+}
+
+#drustveno li a.facebook{
+	background:url(../img/facebook.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#drustveno .twitter{
+	background:url(../img/twitter.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#drustveno .mail{
+	background:url(../img/mail.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#footer footer{
+	font-size: 1em;
+	text-align: center;
+}
+
+#footer footer em{
+	font-size: 2em;
+}
+
+@media screen and (max-width:640px){
+	
+#login #naruci{
+	display: none;
+}
+
+#login #reglog{
+	width: 100%;
+	 background-color: hsla(360, 91%, 52%, 0.8);
+	 padding: 2% 0;
+	 float: none;
+}
+
+#reglog ul{
+	text-align: center;
+}
+
+#reglog li{
+	width: 49%;
+	border-right: 1px dotted white;
+	text-align: center;
+}
+
+#reglog li:last-child{
+	border-right: none;
+}
+
+#login #reglog ul li a:link, a:visited{
+	padding: 4px 10px;
+}
+
+#login #reglog ul li a:hover{
+	border: none;
+	background-color: none;
+    transition: all .2s linear;
+}
+
+#reglog .dobrodosli{
+	text-align: center;
+}
+
+#headline{
+	padding: 0;
+}
+
+#headline img{
+	width: 30%;
+}
+
+#headline h1{
+	font-size:4em;
+}
+
+#headline h2{
+	font-size: 3em;
+}
+
+#headline h3{
+	font-size: 1.2em;
+}
+
+#headline h3 em{
+	display: none;
+}
+
+#headline p{
+	display: none;
+}
+
+
+#content .opis h1{
+	font-size: 2em;
+}
+
+#content .opis h2{
+	font-size: 1.5em;
+}
+
+#content .opis h3, p{
+	font-size: 1.2em;
+}
+
+
+#content .blink{	
+	font-size: 1.2em;
+}
+
+#drustveno h1{
+	font-size: 2em;
+}
+
+#drustveno li a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+	border: 1px solid white;
+	opacity: .4;
+}
+
+#drustveno li a:hover{
+	opacity: 1;
+	transition: all 1s linear;
+}
+
+#footer footer{
+	font-size: .8em;
+	text-align: center;
+}
+
+footer a{
+	color: white;
+}
+
+#footer footer em{
+	font-size: 2em;
+}
+
+
+
+}
