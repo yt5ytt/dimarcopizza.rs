@@ -3,7 +3,7 @@
 	include "../db/db_kontakt.php";
 
 	if(@$_GET["arhiva_id"]){
-		
+
 		$id = $_GET["arhiva_id"];
 		$upit_arhiva = "select * from porudzbine where id='$id' limit 1";
 		$rez_arhiva = $db_admin -> query($upit_arhiva);
@@ -15,16 +15,17 @@
 			$porudzbina = $obj->porudzbina;
 			$cena = $obj->cena;
 			$vreme_dostave = $obj->vreme_dostave;
-			$broj_narucivanja_korisnika = $obj->broj_narucivanja_korisnika;			
-		}		
-		
-		$insertArhiva = "INSERT INTO arhiva(id, datum, vreme, korisnik, porudzbina, cena, vreme_dostave, broj_narucivanja_korisnika) 
-		VALUES ('$id_porudzbine', '$datum', '$vreme', '$korisnik', '$porudzbina', '$cena', '$vreme_dostave', '$broj_narucivanja_korisnika')";
+			$broj_narucivanja_korisnika = $obj->broj_narucivanja_korisnika;
+			$status = $obj->status;
+		}
+
+		$insertArhiva = "INSERT INTO arhiva(id, datum, vreme, korisnik, porudzbina, cena, vreme_dostave, broj_narucivanja_korisnika, status)
+		VALUES ('$id_porudzbine', '$datum', '$vreme', '$korisnik', '$porudzbina', '$cena', '$vreme_dostave', '$broj_narucivanja_korisnika', '$status')";
 		$db_admin -> query($insertArhiva);
-		
+
 		$db_admin -> query("delete from porudzbine where id='$id' limit 1");
 		header("Location: porudzbine.php");
-		
+
 	}
 ?>
 
@@ -39,20 +40,20 @@
 		<link rel="icon" type="img/png" href="img/favicon.png">
 	</head>
 	<body>
-		
+
 		<?php
 			if(@$_SESSION["korisnik"]){
 		?>
-	
+
 		<div id="container">
-			<header>			
+			<header>
 				<div id="logo">
 					<img src="img/favicon.png" /> <em>Porudžbine</em>
-				</div><!--kraj diva logo-->				
-				
+				</div><!--kraj diva logo-->
+
 		<?php
 			if(@$_SESSION["korisnik"]){
-		?>		
+		?>
 				<div id="izloguj">
 					<a href="logoff.php">Izloguj se</a>
 				</div><!--kraj diva izloguj-->
@@ -75,17 +76,17 @@
 					<li><a href="dodavanje_slika.php">Dodavanje slika</a></li>
 				</ul>
 			</nav>
-		
-		
+
+
 		<?php
 			}
 		?>
-			
-			
-			
+
+
+
 			<div id="glavno">
 					<?php
-					
+
 						if(@$_POST["submit"]){
 							$mail_adresa  = $_POST["email"];
 							$ime_korisnika = $_POST["ime"];
@@ -98,17 +99,17 @@
 										.$vreme_dostave." minuta.\n\n";
 							$poruka .= "Vaš Di Marco!\n\n";
 							$poruka .= "Za sve dodatne informacije možete pozvati na telefone:\n011/29-94-706 i 065/85-85-550";
-							
+
 							mail($mail_adresa, $subject, $poruka, $headers);
-							
+
 							$upis_potvrde = "update porudzbine set potvrda='1' where id='$_POST[id_porudzbine]'";
 							$db_admin -> query($upis_potvrde);
 						}
-						
+
 				if(@$_SESSION["korisnik"]){
-				
+
 				?>
-				
+
 				<table width="100%" border="1">
 					<tr>
 						<th width="1%">Order<br />ID</th>
@@ -130,7 +131,8 @@
 							$temp = explode(":", $obj->vreme);
 							$vreme = $temp[0].":".$temp[1];
 							$licni_broj_narucivanja = $obj->broj_narucivanja_korisnika;
-							
+							$status = $obj->status;
+
 							$upit_korisnik = "select * from users where id='$obj->korisnik' limit 1";
 							$kor = $db_admin -> query($upit_korisnik);
 							while($korisnik = mysqli_fetch_object($kor)){
@@ -139,7 +141,7 @@
 								$prezime = $korisnik -> prezime;
 								$brojnarucivanja = $korisnik -> brojnarucivanja;
 							}
-							
+
 							$upit_podaci = "select * from user_podaci where id='$obj->korisnik' limit 1";
 							$user_podaci = $db_admin -> query($upit_podaci);
 							while ($podaci = mysqli_fetch_object($user_podaci)){
@@ -152,10 +154,10 @@
 								$interfon = $podaci -> interfon;
 								$sprat = $podaci -> sprat;
 								$brojstana = $podaci -> brojstana;
-							}							
+							}
 							$porudzbina = unserialize($obj -> porudzbina);
 							$cena = $obj -> cena;
-							
+
 							echo "<td align='center'>$id</td>";
 							echo "<td align='center'>$datum<br />$vreme</td>";
 							echo "<td align='left' valign='top'>";
@@ -183,7 +185,7 @@
 							echo "<ul>";
 							echo "<li class='proizvod'>";
 								echo "<h3>";
-								echo "<b>". $cart_itm['kolicina']." &times; ".$cart_itm["naziv"]."</b>"; 
+								echo "<b>". $cart_itm['kolicina']." &times; ".$cart_itm["naziv"]."</b>";
 								if($cart_itm['vrsta_proizvoda'] == 'napitci'){
 									echo ", ". $cart_itm["velicina_porcije"]."<br />";
 								}
@@ -242,7 +244,7 @@
 										$rez = $db_admin -> query($upit);
 										while ($odabrani_dodatak = mysqli_fetch_object($rez)){
 											echo "+".$odabrani_dodatak -> naziv." ";
-										}												
+										}
 									}
 								echo "<br />";
 								}
@@ -260,7 +262,7 @@
 										$rez = $db_admin -> query($upit);
 										while ($odabrani_dodatak = mysqli_fetch_object($rez)){
 											echo "+".$odabrani_dodatak -> naziv." ";
-										}												
+										}
 									}
 								echo "<br />";
 								}
@@ -290,8 +292,8 @@
 										$upit = "select naziv, cena from $naziv_tabele where naziv = '$dodatak'";
 										$rez = $db_admin -> query($upit);
 										while ($odabrani_dodatak = mysqli_fetch_object($rez)){
-											echo "+" . $odabrani_dodatak -> naziv." ";											
-										}									
+											echo "+" . $odabrani_dodatak -> naziv." ";
+										}
 									}
 								echo "<br />";
 								}
@@ -303,43 +305,53 @@
 							}
 							echo "</td>";
 							echo "<td align='center'>$cena</td>";
-							echo "<td align='center'>";							
-							echo $obj -> vreme_dostave;							
+							echo "<td align='center'>";
+							echo $obj -> vreme_dostave;
 							echo "</td>";
 							echo "<td align='center'>";
-							
+
+							if($status == "odbijeno"){
+				?>
+								<img class="odbijenaSlika" src="img/cross.png" />
+				<?php
+						}elseif($status == "prihvaceno"){
+				?>
+								<img class="odbijenaSlika" src="img/check.png" />
+				<?php
+							}
+
 							echo "</td>";
 							echo "</tr>";
 						}
-							
-						$query = "select potvrda from porudzbine";
+
+						/*$query = "select potvrda from porudzbine";
 						$provera_potvrde = $db_admin -> query($query);
 						while($provera = mysqli_fetch_object($provera_potvrde)){
 							if($provera->potvrda == 0){
 					?>
-							<audio src="alarm/alarm.wav" autoplay loop />
+							<!--<audio src="alarm/alarm.wav" autoplay loop />-->
 					<?php
 							}
-						}
+						}*/
 					?>
-					
+
 				</table>
-		<?php 	} 
-		?>	
+		<?php 	}
+		?>
 			</div>
 		</div><!--zavrsetak diva container-->
-		
-		<?php 	} 
+
+		<?php 	}
 		?>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 		 $('span.nav_btn').click(function (){
 			 $('span.nav_btn').css("border-bottom", "1px dotted hsla(345, 100%, 16%, 0.8)");
 			 $('ul.nav').toggle('fast');
 		 })
-		
+
 		</script>
-		
+
 	</body>
 </html>

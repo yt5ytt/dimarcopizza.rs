@@ -246,11 +246,11 @@ nav ul li a:hover{
 	overflow: hidden;
 }
 
-#content .snowing{
+/*#content .snowing{
 	width: 100%;
-	/*background: url(../img/snowing2.gif) no-repeat top center fixed;
-	background-size: cover;*/
-}
+	background: url(../img/snowing2.gif) no-repeat top center fixed;
+	background-size: cover;
+}*/
 
 #content .opis{
 	width: 100%;

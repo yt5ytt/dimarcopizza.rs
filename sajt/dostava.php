@@ -2653,7 +2653,7 @@
 											</div><!--kraj diva napitak-->
 										</form>
 										
-										<form action="korpa.php" method="post">
+										<!--<form action="korpa.php" method="post">
 											<div class="napitak">
 												<input type="hidden" name="vrsta_proizvoda" value="napitci" />
 												<input type="hidden" name="return_url" value="<?php echo $current_url; ?>" />
@@ -2665,7 +2665,7 @@
 												<section class="kolicina">Količina: <input type="number" name="kolicina" value="1" min="1" required aria-required="true"/></section>
 												<section class="potvrdi"><input class="submit" type="submit" name="submit" value="Naruči" /></section>
 											</div><!--kraj diva napitak-->
-										</form>
+										<!--</form>-->
 										
 										<form action="korpa.php" method="post">
 											<div class="napitak">

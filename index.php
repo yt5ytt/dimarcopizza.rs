@@ -29,7 +29,6 @@
 		</div>
 		
 		<div id="container">
-		
 			<header>
 				<div id="login">
 					<div id="naruci">
@@ -128,12 +127,14 @@
 							SREĆNA NOVA GODINA!!!<br />
 							VAŠ DiMARCO!!!
 						</h2>
-					</div>
+					</div><!--kraj diva text-->
 					
-					<div class="blink">
-						<h2>Zbog novogodišnjih i božićnih praznika<br />
-						picerija Di Marco će raditi 31.12. do 17:30 časova,<br />
-						a za Božić 07.01. radno vreme će biti od 17:30 časova<br /><br />
+					<!--<div class="blink">
+						<h2>O B A V E Š T E NJ E ! ! !<br />
+						Zbog Uskršnjih praznika, picerija DiMarco<br />
+						neće raditi 08.04.2018.godine<br />
+						<h1 style="color: red; text-shadow: 2px 2px black;">МИР БОЖЈИ<br />
+						ХРИСТОС ВОСКРЕСЕ</h1><br /><br />
 					</div><!--kraj diva blink-->
 					
 					<h2>Dobrodošli na zvaničnu web prezentaciju</h2>

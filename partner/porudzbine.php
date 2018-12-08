@@ -15,20 +15,20 @@
 		<link rel="icon" type="img/png" href="img/favicon.png">
 	</head>
 	<body>
-		
+
 		<?php
 			if(@$_SESSION["korisnik"]){
 		?>
-	
+
 		<div id="container">
-			<header>			
+			<header>
 				<div id="logo">
 					<img src="img/favicon.png" /> <em>Porudžbine</em>
-				</div><!--kraj diva logo-->				
-				
+				</div><!--kraj diva logo-->
+
 		<?php
 			if(@$_SESSION["korisnik"]){
-		?>		
+		?>
 				<div id="izloguj">
 					<a href="logoff.php">Izloguj se</a>
 				</div><!--kraj diva izloguj-->
@@ -51,16 +51,16 @@
 					<li><a href="dodavanje_slika.php">Dodavanje slika</a></li>
 				</ul>
 			</nav>
-		
-		
+
+
 		<?php
 			}
 		?>
-			
-			
-			
+
+
+
 			<div id="glavno">
-					<?php 
+					<?php
 						$dan = date("l");
 						if($dan == "Monday"){
 							$trenutni_dan = "Ponedeljak";
@@ -76,10 +76,10 @@
 							$trenutni_dan = "Subota";
 						}else{
 							$trenutni_dan = "Nedelja";
-						}						
+						}
 						$trenutni_datum = date("d.m.Y.");
 						$trenutno_vreme = date("H:i");
-						
+
 						$upit_radno_vreme = "select radno_vreme from radno_vreme";
 						$rez_radno_vreme = $db_admin -> query($upit_radno_vreme);
 						while($obj_radno_vreme = mysqli_fetch_object($rez_radno_vreme)){
@@ -104,7 +104,7 @@
 						<?php echo $trenutni_dan.", ".$trenutni_datum." ".$trenutno_vreme; ?>
 					</div>
 					</div>
-					
+
 					<?php
 						if(@$_POST["submit"]){
 							$mail_adresa  = $_POST["email"];
@@ -118,17 +118,40 @@
 										.$vreme_dostave." minuta.\n\n";
 							$poruka .= "Vaš Di Marco!\n\n";
 							$poruka .= "Za sve dodatne informacije možete pozvati na telefone:\n011/29-94-706 i 065/85-85-550";
-							
+
 							mail($mail_adresa, $subject, $poruka, $headers);
-							
+
 							$upis_potvrde = "update porudzbine set potvrda='1' where id='$_POST[id_porudzbine]'";
 							$db_admin -> query($upis_potvrde);
+						}elseif(@$_POST["reject"]){
+
+							$id = $_POST["id_porudzbine"];
+							$mail_adresa  = $_POST["email"];
+							$ime_korisnika = $_POST["ime"];
+							$vreme_dostave = $_POST["vreme_dostave"];
+							$razlog = $_POST["reject"];
+							$subject = "Di Marco pizzeria - PORUDŽBINA ODBIJENA";
+							$headers = "From:  dimarcopizza@gmail.com";
+							$poruka = "Poštovani ".$ime_korisnika.",\n\n";
+							$poruka .= "vaša porudžbina je odbijena iz sledeceg razloga:\n\n";
+							$poruka .= $razlog . "\n\n";
+							$poruka .= "Vaš Di Marco!\n\n";
+							$poruka .= "Za sve dodatne informacije možete pozvati na telefone:\n011/29-94-706 i 065/85-85-550";
+
+							mail($mail_adresa, $subject, $poruka, $headers);
+
+							$upis_potvrde = "update porudzbine set potvrda='1' where id='$_POST[id_porudzbine]'";
+							$db_admin -> query($upis_potvrde);
+
+							$upis_odbijeno = "update porudzbine set status='odbijeno' where id='$_POST[id_porudzbine]'";
+							$db_admin -> query($upis_odbijeno);
+
 						}
-						
+
 				if(@$_SESSION["korisnik"]){
-				
+
 				?>
-				
+
 				<table width="100%" border="1">
 					<tr>
 						<th width="1%">Order<br />ID</th>
@@ -146,7 +169,7 @@
 							$upis = "update porudzbine set vreme_dostave='$vreme_dostave' where id='$id_porudzbine'";
 							$db_admin -> query($upis);
 						}
-						
+
 						$upit_porudzbine = "select * from porudzbine order by id desc";
 						$rez_porudzbine = $db_admin -> query($upit_porudzbine);
 						while($obj = mysqli_fetch_object($rez_porudzbine)){
@@ -157,7 +180,8 @@
 							$temp = explode(":", $obj->vreme);
 							$vreme = $temp[0].":".$temp[1];
 							$licni_broj_narucivanja = $obj->broj_narucivanja_korisnika;
-							
+							$status = $obj -> status;
+
 							$upit_korisnik = "select * from users where id='$obj->korisnik' limit 1";
 							$kor = $db_admin -> query($upit_korisnik);
 							while($korisnik = mysqli_fetch_object($kor)){
@@ -166,7 +190,7 @@
 								$prezime = $korisnik -> prezime;
 								$brojnarucivanja = $korisnik -> brojnarucivanja;
 							}
-							
+
 							$upit_podaci = "select * from user_podaci where id='$obj->korisnik' limit 1";
 							$user_podaci = $db_admin -> query($upit_podaci);
 							while ($podaci = mysqli_fetch_object($user_podaci)){
@@ -179,11 +203,11 @@
 								$interfon = $podaci -> interfon;
 								$sprat = $podaci -> sprat;
 								$brojstana = $podaci -> brojstana;
-							}							
+							}
 							$porudzbina = unserialize($obj -> porudzbina);
 							$cena = $obj -> cena;
 							$potvrda = $obj -> potvrda;
-							
+
 							echo "<td align='center'>$id</td>";
 							echo "<td align='center'>$datum<br />$vreme</td>";
 							echo "<td align='left' valign='top'>";
@@ -211,7 +235,7 @@
 							echo "<ul>";
 							echo "<li class='proizvod'>";
 								echo "<h3>";
-								echo "<b>". $cart_itm['kolicina']." &times; ".$cart_itm["naziv"]."</b>"; 
+								echo "<b>". $cart_itm['kolicina']." &times; ".$cart_itm["naziv"]."</b>";
 								if($cart_itm['vrsta_proizvoda'] == 'napitci'){
 									echo ", ". $cart_itm["velicina_porcije"]."<br />";
 								}
@@ -273,7 +297,7 @@
 										$rez = $db_admin -> query($upit);
 										while ($odabrani_dodatak = mysqli_fetch_object($rez)){
 											echo "+".$odabrani_dodatak -> naziv." ";
-										}												
+										}
 									}
 								echo "<br />";
 								}
@@ -291,7 +315,7 @@
 										$rez = $db_admin -> query($upit);
 										while ($odabrani_dodatak = mysqli_fetch_object($rez)){
 											echo "+".$odabrani_dodatak -> naziv." ";
-										}												
+										}
 									}
 								echo "<br />";
 								}
@@ -321,8 +345,8 @@
 										$upit = "select naziv, cena from $naziv_tabele where naziv = '$dodatak'";
 										$rez = $db_admin -> query($upit);
 										while ($odabrani_dodatak = mysqli_fetch_object($rez)){
-											echo "+" . $odabrani_dodatak -> naziv." ";											
-										}									
+											echo "+" . $odabrani_dodatak -> naziv." ";
+										}
 									}
 								echo "<br />";
 								}
@@ -353,7 +377,7 @@
 								echo $obj -> vreme_dostave;
 							}
 							echo "</td>";
-							echo "<td align='center'>";
+							echo "<td class='dugmici' style='position: relative;' align='center'>";
 							if($potvrda == 0){
 					?>
 								<input type="hidden" name="id_porudzbine" value="<?php echo $id; ?>" />
@@ -361,18 +385,44 @@
 								<input type="hidden" name="ime" value="<?php echo $ime?>" />
 								<input type="hidden" name="datum" value="<?php echo $datum; ?>" />
 								<input type="hidden" name="vreme" value="<?php echo $vreme; ?>"/>
-								<input type="submit" name="submit" value="Potvrdi" />
+								<input style="background-color: green; color: white; width: 80%; padding: 5px 0; margin-bottom: 5px;" type="submit" name="submit" value="Prihvati" />
+								<button class="reject" style="background-color: red; color: white; width: 80%; padding: 5px 5px;" type="submit" name="reject" />Odbij</button>
+								<div class="odbijMeni">
+									<ul>
+										<li><input type="submit" name="reject" value="Narudžbina odbijena"/></li>
+										<li><input type="submit" name="reject" value="Pogrešna oblast dostave"/></li>
+										<li><input type="submit" name="reject" value="Neispravno vreme"/></li>
+										<li><input type="submit" name="reject" value="Restoran prezauzet"/></li>
+										<li><input type="submit" name="reject" value="Nema proizvoda"/></li>
+										<li><input type="submit" name="reject" value="Premalo proizvoda"/></li>
+										<li><input type="submit" name="reject" value="Neuspela provera korisnika"/></li>
+									</ul>
+								</div>
 							</form>
-					<?php							
-							}elseif(@$_SESSION["korisnik"] == "administrator" and $potvrda == 1){
-					?>
-								<a href="arhiva.php?arhiva_id=<?php echo $id;?>">Arhiviraj</a>
 					<?php
+							}elseif($potvrda == 1){
+
+								if($status == "odbijeno"){
+					?>
+									<img class="odbijenaSlika" src="img/cross.png" />
+					<?php
+							}elseif($status == "prihvaceno"){
+					?>
+									<img class="odbijenaSlika" src="img/check.png" />
+					<?php
+								}
+							
+							
+							    if(@$_SESSION["korisnik"] == "administrator"){
+					?>
+								    <a href="arhiva.php?arhiva_id=<?php echo $id;?>">Arhiviraj</a>
+					<?php
+							    }
 							}
 							echo "</td>";
 							echo "</tr>";
 						}
-							
+
 						$query = "select potvrda from porudzbine";
 						$provera_potvrde = $db_admin -> query($query);
 						while($provera = mysqli_fetch_object($provera_potvrde)){
@@ -383,24 +433,31 @@
 							}
 						}
 					?>
-					
+
 				</table>
-		<?php 	} 
-		?>	
+		<?php 	}
+		?>
 			</div>
 		</div><!--zavrsetak diva container-->
-		
-		<?php 	} 
+
+		<?php 	}
 		?>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 		 $('span.nav_btn').click(function (){
 			 $('span.nav_btn').css("border-bottom", "1px dotted hsla(345, 100%, 16%, 0.8)");
 			 $('ul.nav').toggle('fast');
 		 })
-		
-		</script>
-		
+
+
+      $('button.reject').click(function(e){
+        $('div.odbijMeni').css('display', 'block');
+				e.preventDefault();
+      })
+
+
+		 </script>
+
 	</body>
 </html>

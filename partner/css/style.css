@@ -70,7 +70,7 @@ body{
 	cursor: pointer;
 	line-height: 2em;
 	font-size: 1.5em;
-	border:1px solid hsla(0, 0%, 100%, .5);
+	border: 1px solid hsla(0, 0%, 100%, .5);
 	background-color: hsla(220, 100%, 60%, .5);
 	border-radius: 20px;
 	width: 40%;
@@ -78,7 +78,7 @@ body{
 }
 
 #login-container section .submit input:hover{
-	border:1px solid hsla(0, 0%, 100%, 1);
+	border: 1px solid hsla(0, 0%, 100%, 1);
 	background-color: hsla(220, 100%, 60%, 1);
 	transition: all .5s linear;
 }
@@ -129,12 +129,12 @@ header #izloguj{
 	width: 30%;
 	margin-right: 2%;
 	text-align: right;
-	line-height: 3em;	
+	line-height: 3em;
 }
 
 header #izloguj a{
 	padding: 5px 20px;
-	border:1px solid hsla(0, 0%, 100%, .5);
+	border: 1px solid hsla(0, 0%, 100%, .5);
 	background-color: hsla(360, 91%, 52%, .5);
 	border-radius: 20px;
 	text-decoration: none;
@@ -146,7 +146,7 @@ header #izloguj a{
 }
 
 header #izloguj a:hover{
-	border:1px solid hsla(0, 0%, 100%, 1);
+	border: 1px solid hsla(0, 0%, 100%, 1);
 	background-color: hsla(360, 91%, 52%, 1);
 	transition: all .5s linear;
 }
@@ -271,6 +271,39 @@ table ul li{
 	line-height: 1.5em;
 }
 
+.odbijMeni{
+	display: none;
+	position: absolute;
+	right: 0;
+	white-space: nowrap;
+	z-index: 2000;
+}
+
+.odbijenaSlika{
+	width: 50%;
+}
+
+.odbijMeni ul{
+	color: white;
+}
+
+.odbijMeni ul li{
+	background-color: red;
+	border: 1px solid white;
+	width: 200px;
+}
+
+.odbijMeni ul li input{
+	text-decoration: none;
+	color: white;
+	background-color: red;
+	display: block;
+	border: none;
+	cursor: pointer;
+	padding: 5px 0;
+	width: 100%;
+}
+
 /********************************/
 /*      P A U Z I R A NJ E      */
 /********************************/
@@ -282,7 +315,7 @@ table ul li{
 
 #sidebar ul{
 	width: 100%;
-	list-style-type: none;	
+	list-style-type: none;
 }
 
 #sidebar li{
@@ -411,13 +444,13 @@ table ul li{
 
 #korisnik .naslov{
 	text-align: center;
-	font-weight: bolder;	
+	font-weight: bolder;
 }
 
 #korisnik .id_korisnika{
 	float: left;
 	width: 10%;
-	text-align: center;	
+	text-align: center;
 }
 
 #korisnik .korisnik_naslov{
@@ -853,7 +886,7 @@ table ul li{
 }
 
 #potvrda{
-	margin: 1% 0 0 2%;	
+	margin: 1% 0 0 2%;
 }
 
 #gallery{
