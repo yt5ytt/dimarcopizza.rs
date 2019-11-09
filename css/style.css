@@ -34,7 +34,7 @@ body{
 	bottom: 10px;
 	left: 10px;
 	width: 15%;
-	z-index: 2000;	
+	z-index: 2000;
 }
 
 #jelka img{
@@ -131,7 +131,7 @@ header{
 
 #reglog .dobrodosli a:link, a:visited{
 	display: inline-block;
-	color: white;	
+	color: white;
 	text-decoration: none;
 	margin-left: 1%;
 }
@@ -209,11 +209,11 @@ nav .nav_btn{
 nav ul{
 	width: 100%;
 	list-style-type: none;
-	text-align: center;	
+	text-align: center;
 }
 
 nav ul li{
-	display: inline-block;	
+	display: inline-block;
 }
 
 nav ul li a:link, a:visited{
@@ -246,11 +246,11 @@ nav ul li a:hover{
 	overflow: hidden;
 }
 
-/*#content .snowing{
+.snowing{
 	width: 100%;
-	background: url(../img/snowing2.gif) no-repeat top center fixed;
+	background: url(../img/snowing1-1.gif) no-repeat top center fixed;
 	background-size: cover;
-}*/
+}
 
 #content .opis{
 	width: 100%;
@@ -306,13 +306,13 @@ nav ul li a:hover{
 	color: orange;
 }
 
-#content .blink{	
+#content .blink{
 	/*text-transform: uppercase;*/
-	color: lightgreen;
+	color: yellow;
 	text-align: center;
 	-moz-animation: blink 2s infinite;
 	-webkit-animation: blink 2s infinite;
-	animation: blink 2s infinite;	
+	animation: blink 2s infinite;
 }
 
 #content h2{
@@ -332,7 +332,7 @@ nav ul li a:hover{
 #footer{
 	width: 100%;
 	background-color: hsla(359, 100%, 0%, 0.5);
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 #drustveno{
@@ -419,7 +419,7 @@ footer a:hover{
 #login{
 	margin: 0;
 	padding: 0;
-}	
+}
 
 #login #naruci{
 	display: none;
@@ -512,7 +512,7 @@ nav .nav_btn{
 }
 
 nav ul li{
-	display: block;	
+	display: block;
 	width: 100%;
 	background-color: hsla(360, 91%, 52%, 0.8);
 	padding: 2% 0;
@@ -547,7 +547,7 @@ nav ul li a:hover{
 }
 
 
-#content .blink{	
+#content .blink{
 	font-size: 1.2em;
 }
 

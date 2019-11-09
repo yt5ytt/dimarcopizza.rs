@@ -816,3 +816,6 @@
 [19-May-2016 12:00:43 Europe/Belgrade] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1680 but version 1672 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
 [19-May-2016 12:27:51 Europe/Belgrade] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1680 but version 1672 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
 [19-May-2016 16:10:20 Europe/Belgrade] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1680 but version 1672 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[03-Mar-2019 21:56:57 Europe/Belgrade] PHP Warning:  include(../db/db_kontakt.php): failed to open stream: No such file or directory in /home/dimarcop/public_html/knjiga_utisaka.php on line 4
+[03-Mar-2019 21:56:57 Europe/Belgrade] PHP Warning:  include(../db/db_kontakt.php): failed to open stream: No such file or directory in /home/dimarcop/public_html/knjiga_utisaka.php on line 4
+[03-Mar-2019 21:56:57 Europe/Belgrade] PHP Warning:  include(): Failed opening '../db/db_kontakt.php' for inclusion (include_path='.:/opt/alt/php70/usr/share/pear') in /home/dimarcop/public_html/knjiga_utisaka.php on line 4
