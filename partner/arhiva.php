@@ -2,6 +2,8 @@
 	session_start();
 	include "../db/db_kontakt.php";
 
+	$db_admin -> query("delete from arhiva where datediff(now(), str_to_date(datum, '%Y-%m-%d'))>180");
+
 	if(@$_GET["arhiva_id"]){
 
 		$id = $_GET["arhiva_id"];
