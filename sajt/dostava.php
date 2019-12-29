@@ -521,7 +521,7 @@
 									<h2>Pizzeria Di Marco trenutno ne prima porudžbine</h2>
 								</div>
 <?php
-							}elseif($ne_radi > 2 and $ne_radi < 10){
+							}elseif($ne_radi > 1 and $ne_radi < 10){
 
 ?>
 								<div class="radno_vreme">

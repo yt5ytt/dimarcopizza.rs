@@ -2150,3 +2150,5 @@
 [17-Jul-2019 17:40:22 Europe/Belgrade] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/dimarcop/public_html/sajt/dostava.php on line 2527
 [17-Jul-2019 17:43:22 Europe/Belgrade] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/dimarcop/public_html/sajt/dostava.php on line 2176
 [17-Jul-2019 17:43:22 Europe/Belgrade] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/dimarcop/public_html/sajt/dostava.php on line 2527
+[29-Aug-2019 00:42:54 Europe/Belgrade] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/dimarcop/public_html/sajt/dostava.php on line 2176
+[29-Aug-2019 00:42:54 Europe/Belgrade] PHP Warning:  mysqli_fetch_object() expects parameter 1 to be mysqli_result, boolean given in /home/dimarcop/public_html/sajt/dostava.php on line 2527

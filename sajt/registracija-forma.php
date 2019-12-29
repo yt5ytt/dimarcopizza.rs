@@ -207,7 +207,7 @@
 												<optgroup label="Beograd">
 
 												<?php
-													$db_admin -> query("SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_ci'");
+													//$db_admin -> query("SET NAMES 'utf8mb4' COLLATE 'utf8mb4_unicode_ci'");
 													$upit = "select * from beograd order by oblast asc";
 													$rez = $db_admin -> query($upit);
 

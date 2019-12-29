@@ -5,9 +5,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Pizzeria Di Marco - online naručivanje</title>
-		<meta charset="utf-8" />
+
 		<meta name="keywords" content="dostava, donesi, pica, pizza, dimarco, di marco,
 									   brza hrana, piće, pice, picerija, pizzeria, hrana" />
 		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
@@ -19,14 +19,17 @@
 
 	</head>
 	<body>
-		<!--<div class="snowing">-->
+
+
+		<div class="snowing">
+
 
 		<div id="jelka">
 			<img src="img/jelka.gif" />
 		</div>
 
 		<div id="dedaMraz">
-			<img src="img/dedaMraz.gif" />
+			<img src="img/dedaMraz11.gif" />
 		</div>
 
 		<div id="container">
@@ -114,7 +117,7 @@
 			</header>
 
 			<div id="content" role="main">
-			<!--<div class="snowing">-->
+			<div class="snowing">
 
 				<div class="opis">
 					<h1>Pizzeria Di Marco</h1>
@@ -129,17 +132,13 @@
 						</h2>
 					</div><!--kraj diva text-->
 
-					<!--<div class="blink">
+					<div class="blink">
 						<h2>O B A V E Š T E NJ E ! ! !<br />
 					  Radno vreme picerije DiMarco<br />
-					  za vreme predstojećih praznika:<br />
-					  26.04. od 10.00 do 02.00 časova<br />
-					  27.04. od 18.00 do 02.00 časova<br />
-					  28.04. je NERADNI dan<br />
-					  29.04. od 10.00 do 02.00 časova<br />
-					  30.04. od 10.00 do 02.00 časova<br />
-					  01.05. od 18.00 do 02.00 časova<br />
-					  02.05.i dalje normalno od 10.00 do 02.00 časova<br />
+					  31.12.2019. od 10.00 do 18.00 časova<br />
+					  01.01.2020. od 17.00 do 02.00 časova<br />
+					  06.01.2020. od 10.00 do 02.00 časova<br />
+						07.01.2020. je NERADNI dan<br />
 						Vaš DiMarco<br />
 					</div><br /><!--kraj diva blink-->
 
@@ -170,7 +169,7 @@
 
 				</div><!--zavrsetak diva opis-->
 
-			<!--</div><!--kraj diva .snowing-->
+			</div><!--kraj diva .snowing-->
 			</div><!--zavrsetak diva content-->
 
 			<div id="footer">
@@ -198,7 +197,7 @@
 
 		</script>
 
-	<!--</div><!--kraj diva .snowing-->
+	</div><!--kraj diva .snowing-->
 
 	</body>
 
