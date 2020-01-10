@@ -132,7 +132,7 @@
 						</h2>
 					</div><!--kraj diva text-->
 
-					<div class="blink">
+					<!--<div class="blink">
 						<h2>O B A V E Š T E NJ E ! ! !<br />
 					  Radno vreme picerije DiMarco<br />
 					  31.12.2019. od 10.00 do 18.00 časova<br />
