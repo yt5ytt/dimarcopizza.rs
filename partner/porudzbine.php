@@ -108,14 +108,12 @@
 					<?php
 						if(@$_POST["submit"]){
 							$mail_adresa  = $_POST["email"];
-							//$mail_adresa .= ", yt5ytt@gmail.com";
 							$ime_korisnika = $_POST["ime"];
 							$vreme_dostave = $_POST["vreme_dostave"];
 							$subject = "Di Marco pizzeria - potvrda prijema porudzbine";
-							$headers = "MIME-Version: 1.0" . "\r\n";
-							//$headers .= "Content-type: text; charset=UTF-8" . "\r\n";
-							$headers .= "From: DiMarco<dimarcopizza@gmail.com>" . "\r\n";
-						    $headers .= "X-Mailer: PHP/" . phpversion();							
+				// 			$headers = "MIME-Version: 1.0" . "\r\n";
+				// 			$headers .= "From: DiMarco<dimarcopizza@gmail.com>" . "\r\n";
+				// 		    $headers .= "X-Mailer: PHP/" . phpversion();							
 							$poruka = "Poštovani ".$ime_korisnika.",\r\n\r\n";
 							$poruka .= "vaša porudžbina je uspešno primljena ".$_POST["datum"]."godine u "
 										.$_POST["vreme"]." i biće vam dostavljena u najkraćem mogućem roku, a najkasnije za "
@@ -125,9 +123,16 @@
 
 							$admin_poruka = "Porudžbina pod rednim brojem " . $_POST['id_porudzbine'] . " je uspešno potvrđena i email potvrda uspešno poslata korisniku\r\n\r\nDiMarco Admin";
 
-							mail($mail_adresa, $subject, $poruka, $headers);
+				// 			mail($mail_adresa, $subject, $poruka, $headers);
+							
+							include("sendMail.php");
+							
+							smtpmailer($mail_adresa, "dimarcopizza@gmail.com", "DiMarco picerija", "Di Marco pizzeria - potvrda prijema porudzbine", $poruka);
 
-							mail("dimarcopizza@gmail.com, yt5ytt@gmail.com", "Potvrda porudžbine", $admin_poruka, $headers);
+				// 			mail("dimarcopizza@gmail.com", "Potvrda porudžbine", $admin_poruka, $headers);
+							
+							smtpmailer("dimarcopizza@gmail.com", "dimarcopizza@gmail.com", "DiMarco picerija", "Potvrda porudžbine", $admin_poruka);
+				// 			smtpmailer("yt5ytt@gmail.com", "dimarcopizza@gmail.com", "DiMarco picerija", "Potvrda porudžbine", $admin_poruka);
 
 							$upis_potvrde = "update porudzbine set potvrda='1' where id='$_POST[id_porudzbine]'";
 							$db_admin -> query($upis_potvrde);
@@ -135,15 +140,13 @@
 
 							$id = $_POST["id_porudzbine"];
 							$mail_adresa  = $_POST["email"];
-							//$mail_adresa .= ", yt5ytt@gmail.com";
 							$ime_korisnika = $_POST["ime"];
 							$vreme_dostave = $_POST["vreme_dostave"];
 							$razlog = $_POST["reject"];
 							$subject = "Di Marco pizzeria - PORUDZBINA ODBIJENA";
-							$headers = "MIME-Version: 1.0" . "\r\n";
-							//$headers .= "Content-type: text; charset=UTF-8" . "\r\n";
-							$headers .= "From: DiMarco<dimarcopizza@gmail.com>" . "\r\n";
-						    $headers .= "X-Mailer: PHP/" . phpversion();
+				// 			$headers = "MIME-Version: 1.0" . "\r\n";
+				// 			$headers .= "From: DiMarco<dimarcopizza@gmail.com>" . "\r\n";
+				// 		    $headers .= "X-Mailer: PHP/" . phpversion();
 							$poruka = "Poštovani ".$ime_korisnika.",\r\n\r\n";
 							$poruka .= "vaša porudžbina je odbijena iz sledeceg razloga:\r\n\r\n";
 							$poruka .= $razlog . "\r\n\r\n";
@@ -152,9 +155,16 @@
 
 							$admin_poruka = "Porudžbina pod rednim brojem " . $_POST['id_porudzbine'] . " je odbijena i email potvrda odbijanja porudžbine je uspešno poslata korisniku\r\n\r\nDiMarco Admin";
 
-							mail($mail_adresa, $subject, $poruka, $headers);
+				// 			mail($mail_adresa, $subject, $poruka, $headers);
+				
+				            include("sendMail.php");
+							
+							smtpmailer($mail_adresa, "dimarcopizza@gmail.com", "DiMarco picerija", "Di Marco pizzeria - odbijena porudzbina", $poruka);
 
-							mail("dimarcopizza@gmail.com, yt5ytt@gmail.com", "Odbijanje porudžbine", $admin_poruka, $headers);
+				// 			mail("dimarcopizza@gmail.com, yt5ytt@gmail.com", "Odbijanje porudžbine", $admin_poruka, $headers);
+							
+							smtpmailer("dimarcopizza@gmail.com", "dimarcopizza@gmail.com", "DiMarco picerija", "Odbijanje porudžbine", $admin_poruka);
+				// 			smtpmailer("yt5ytt@gmail.com", "dimarcopizza@gmail.com", "DiMarco picerija", "Odbijanje porudžbine", $admin_poruka);
 
 							$upis_potvrde = "update porudzbine set potvrda='1' where id='$_POST[id_porudzbine]'";
 							$db_admin -> query($upis_potvrde);

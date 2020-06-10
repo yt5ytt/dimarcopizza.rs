@@ -19,17 +19,14 @@
 
 	</head>
 	<body>
-
-
-		<div class="snowing">
-
+		<!-- <div class="snowing"> -->
 
 		<div id="jelka">
 			<img src="img/jelka.gif" />
 		</div>
 
 		<div id="dedaMraz">
-			<img src="img/dedaMraz11.gif" />
+			<img src="img/dedaMraz.gif" />
 		</div>
 
 		<div id="container">
@@ -117,7 +114,7 @@
 			</header>
 
 			<div id="content" role="main">
-			<div class="snowing">
+			<!-- <div class="snowing"> -->
 
 				<div class="opis">
 					<h1>Pizzeria Di Marco</h1>
@@ -132,7 +129,7 @@
 						</h2>
 					</div><!--kraj diva text-->
 
-					<div class="blink">
+					<!--<div class="blink">
 						<h2>O B A V E Š T E NJ E ! ! !<br />
 					  Radno vreme picerije DiMarco<br />
 					  31.12.2019. od 10.00 do 18.00 časova<br />
@@ -169,7 +166,7 @@
 
 				</div><!--zavrsetak diva opis-->
 
-			</div><!--kraj diva .snowing-->
+			<!-- </div><!--kraj diva .snowing-->
 			</div><!--zavrsetak diva content-->
 
 			<div id="footer">
@@ -197,7 +194,7 @@
 
 		</script>
 
-	</div><!--kraj diva .snowing-->
+	<!-- </div><!--kraj diva .snowing-->
 
 	</body>
 
