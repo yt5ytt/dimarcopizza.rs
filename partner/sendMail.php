@@ -3,6 +3,7 @@ require "PHPMailer/PHPMailerAutoload.php";
 
 function smtpmailer($to, $from, $from_name, $subject, $body){
         $mail = new PHPMailer();
+        $mail -> IsSMTP();                          //This function is needed only on localhost server
         $mail->SMTPAuth = true;
 
         $mail->SMTPSecure = 'ssl';

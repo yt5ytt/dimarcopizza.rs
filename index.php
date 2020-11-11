@@ -129,14 +129,17 @@
 						</h2>
 					</div><!--kraj diva text-->
 
-					<!--<div class="blink">
-						<h2>O B A V E Š T E NJ E ! ! !<br />
-					  Radno vreme picerije DiMarco<br />
+					<div class="blink">
+						<h2>O B A V E Š T E NJ E ! ! !</h2><br />
+						<h2>Picerija Di Marco<br />
+						neće raditi utorkom do daljnjeg<br />
+						Vaš Di Marco.</h2>
+					  <!--Radno vreme picerije DiMarco<br />
 					  31.12.2019. od 10.00 do 18.00 časova<br />
 					  01.01.2020. od 17.00 do 02.00 časova<br />
 					  06.01.2020. od 10.00 do 02.00 časova<br />
 						07.01.2020. je NERADNI dan<br />
-						Vaš DiMarco<br />
+						Vaš DiMarco<br />-->
 					</div><br /><!--kraj diva blink-->
 
 					<h2>Dobrodošli na zvaničnu web prezentaciju</h2>
@@ -160,7 +163,7 @@
 					<div class="blink">
 						<h3>Za sve naše verne kupce, spremili smo iznenađenje!</h3>
 					</div><!--kraj diva blink-->
-					<div class="center">Radno vreme:<br />ponedeljak - nedelja od 10h do 02:00h<br />
+					<div class="center">Radno vreme:<br />ponedeljak - nedelja od 10h do 00:45h<br /><br />
 						<h2>Vaš Di Marco</h2>
 					</div><!--kraj diva center-->
 
