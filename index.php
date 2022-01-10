@@ -19,15 +19,23 @@
 
 	</head>
 	<body>
-		<!-- <div class="snowing"> -->
+		<?php $nova_godina = True ?>
+		<?php $snowing = True; ?>
+		<?php if($snowing): ?>
+			<div class="snowing">
+		<?php endif; ?>
 
-		<div id="jelka">
-			<img src="img/jelka.gif" />
-		</div>
+		<?php if($nova_godina): ?>
 
-		<div id="dedaMraz">
-			<img src="img/dedaMraz.gif" />
-		</div>
+			<div id="jelka">
+				<img src="img/jelka.gif" />
+			</div>
+
+			<div id="dedaMraz">
+				<img src="img/dedaMraz.gif" />
+			</div>
+
+		<?php endif; ?>
 
 		<div id="container">
 			<header>
@@ -112,35 +120,24 @@
 					</ul>
 				</nav>
 			</header>
-
 			<div id="content" role="main">
-			<!-- <div class="snowing"> -->
+
+				<?php if($snowing): ?>
+					<div class="snowing">
+				<?php endif; ?>
 
 				<div class="opis">
 					<h1>Pizzeria Di Marco</h1>
 
-					<!--<div class="text">
-						<h2 style="color: greenyellow">
-					    Dragi naši,<br />
-					    želimo vam da u zdravlju provedete predstojeće praznike<br />
-					    Svima koji slavite, želimo srećan Uskrs<br />
-					    <h1 style="color: red; text-shadow: 2px 2px black;">
-					    ХРИСТОС ВОСКРЕСЕ!!!</h1><br />
-						</h2>
-					</div><!--kraj diva text-->
+					<?php
 
-					<div class="blink">
-						<h2>O B A V E Š T E NJ E ! ! !</h2><br />
-						<h2>Picerija Di Marco<br />
-						neće raditi utorkom do daljnjeg<br />
-						Vaš Di Marco.</h2>
-					  <!--Radno vreme picerije DiMarco<br />
-					  31.12.2019. od 10.00 do 18.00 časova<br />
-					  01.01.2020. od 17.00 do 02.00 časova<br />
-					  06.01.2020. od 10.00 do 02.00 časova<br />
-						07.01.2020. je NERADNI dan<br />
-						Vaš DiMarco<br />-->
-					</div><br /><!--kraj diva blink-->
+						// RAZNE CESTITKE
+						include('cestitka.php');
+
+						// VAŽNA OBAVEŠTENJA NA NASLOVNOJ STRANI
+						//include('obavestenje.php');
+
+					?>
 
 					<h2>Dobrodošli na zvaničnu web prezentaciju</h2>
 					<h3>Italijanska hrana na srpski način<h3>
@@ -163,13 +160,18 @@
 					<div class="blink">
 						<h3>Za sve naše verne kupce, spremili smo iznenađenje!</h3>
 					</div><!--kraj diva blink-->
-					<div class="center">Radno vreme:<br />ponedeljak - nedelja od 10h do 00:45h<br /><br />
+					<div class="center">
+						Radno vreme:<br />
+						ponedeljak - nedelja, izuzev utorkom<br />
+						od 10h do 00:45h<br /><br />
 						<h2>Vaš Di Marco</h2>
 					</div><!--kraj diva center-->
 
 				</div><!--zavrsetak diva opis-->
 
-			<!-- </div><!--kraj diva .snowing-->
+				<?php if($snowing): ?>
+					</div><!-- kraj diva .snowing -->
+				<?php endif; ?>
 			</div><!--zavrsetak diva content-->
 
 			<div id="footer">
@@ -197,7 +199,9 @@
 
 		</script>
 
-	<!-- </div><!--kraj diva .snowing-->
+		<?php if($snowing): ?>
+			</div><!-- kraj diva .snowing -->
+		<?php endif; ?>
 
 	</body>
 
